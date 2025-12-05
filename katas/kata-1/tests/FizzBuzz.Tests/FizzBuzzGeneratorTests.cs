@@ -29,10 +29,10 @@ namespace FizzBuzz.Tests
         public void Generate_WithThree_ReturnsListWithOneTwoAndFizz()
         {
             // Arrange & Act
-            var result = FizzBuzzGenerator.Generate(2);
+            var result = FizzBuzzGenerator.Generate(3);
             
             // Assert
-            result.Should().HaveCount(2);
+            result.Should().HaveCount(3);
             result.Should().BeEquivalentTo(["1","2","Fizz"]);
         }
         
