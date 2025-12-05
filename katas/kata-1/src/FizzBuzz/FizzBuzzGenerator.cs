@@ -9,7 +9,7 @@ namespace FizzBuzz
             {
                 if (EsMultiploDe(numero, 15))
                 {
-                    result.Add("");
+                    result.Add("FizzBuzz");
                     break;
                 }
                 if (EsMultiploDe(numero, 3))
