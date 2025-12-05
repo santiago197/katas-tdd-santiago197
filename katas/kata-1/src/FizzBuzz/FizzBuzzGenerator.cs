@@ -4,7 +4,7 @@ namespace FizzBuzz
     {
         public static List<string> Generate(int count)
         {
-            return ["1"];
+            return ["1","2"];
         }
     }
 }
