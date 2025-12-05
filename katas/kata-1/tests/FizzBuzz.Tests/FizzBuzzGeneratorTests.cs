@@ -60,6 +60,17 @@ namespace FizzBuzz.Tests
             result.Should().BeEquivalentTo(["1", "2", "Fizz", "4", "Buzz", "Fizz"]);
         }
 
+        [Fact]
+        public void Generate_WithMultipleOfFive_ReturnsListWithNumbersAndBuzzMultiplesOfFive()
+        {
+            // Arrange & Act
+            var result = FizzBuzzGenerator.Generate(10);
+
+            // Assert
+            result.Should().HaveCount(10);
+            result.Should().BeEquivalentTo(["1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz"]);
+        }
+
         // [Fact]
         // public void Generate_WithFifteen_ReturnsListWithFizzBuzz()
         // {
