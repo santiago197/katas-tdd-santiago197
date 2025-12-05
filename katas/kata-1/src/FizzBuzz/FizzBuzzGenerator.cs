@@ -4,7 +4,16 @@ namespace FizzBuzz
     {
         public static List<string> Generate(int count)
         {
-            return ["1","2"];
+            var result = new List<string>();
+            if (count == 1)
+                result.Add("1");
+            if (count == 2)
+            {
+                result.Add("1");
+                result.Add("2");
+            }
+
+            return result;
         }
     }
 }
