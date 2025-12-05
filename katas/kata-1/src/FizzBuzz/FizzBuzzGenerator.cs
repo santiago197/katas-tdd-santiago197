@@ -9,7 +9,13 @@ namespace FizzBuzz
             {
                 result.Add(i.ToString());
                 if (i == 2)
+                {
                     result.Add("Fizz");
+                    i++;
+                }
+
+                if (i == 4)
+                    result.Add("Buzz");
             }
 
             return result;
