@@ -1,30 +1,28 @@
 namespace FizzBuzz
 {
-    public class FizzBuzzGenerator
+    public static class FizzBuzzGenerator
     {
         public static List<string> Generate(int count)
         {
             var result = new List<string>();
-            for (var i = 1; i <= count; i++)
+            for (var numero = 1; numero <= count; numero++)
             {
-                if (i % 15 == 0)
+                if (EsMultiploDe(numero, 15))
                 {
                     result.Add("FizzBuzz");
                     break;
                 }
-
-                if (i % 3 == 0)
-                {
+                if (EsMultiploDe(numero, 3))
                     result.Add("Fizz");
-                }
-                else if (i % 5 == 0)
+                else if (EsMultiploDe(numero, 5))
                     result.Add("Buzz");
-
                 else
-                    result.Add(i.ToString());
+                    result.Add(numero.ToString());
             }
 
             return result;
         }
+
+        private static bool EsMultiploDe(int numero, int multiplo) => numero % multiplo == 0;
     }
 }
