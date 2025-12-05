@@ -10,38 +10,51 @@ namespace FizzBuzz.Tests
         {
             // Arrange & Act
             var result = FizzBuzzGenerator.Generate(1);
-            
+
             // Assert
             result.Should().HaveCount(1);
             result[0].Should().Be("1");
         }
+
         [Fact]
         public void Generate_WithTwo_ReturnsListWithTwo()
         {
             // Arrange & Act
             var result = FizzBuzzGenerator.Generate(2);
-            
+
             // Assert
             result.Should().HaveCount(2);
-            result.Should().BeEquivalentTo(["1","2"]);
-        }  
+            result.Should().BeEquivalentTo(["1", "2"]);
+        }
+
         [Fact]
         public void Generate_WithThree_ReturnsListWithOneTwoAndFizz()
         {
             // Arrange & Act
             var result = FizzBuzzGenerator.Generate(3);
-            
+
             // Assert
             result.Should().HaveCount(3);
-            result.Should().BeEquivalentTo(["1","2","Fizz"]);
+            result.Should().BeEquivalentTo(["1", "2", "Fizz"]);
         }
-        
+
+        [Fact]
+        public void Generate_WithFive_ReturnsListWithOneTwoFizzFourAndBuzz()
+        {
+            // Arrange & Act
+            var result = FizzBuzzGenerator.Generate(5);
+
+            // Assert
+            result.Should().HaveCount(5);
+            result.Should().BeEquivalentTo(["1", "2", "Fizz", "4", "Buzz"]);
+        }
+
         [Fact]
         public void Generate_WithFifteen_ReturnsListWithFizzBuzz()
         {
             // Arrange & Act
             var result = FizzBuzzGenerator.Generate(15);
-            
+
             // Assert
             result.Should().HaveCount(15);
             result[14].Should().Be("FizzBuzz");
