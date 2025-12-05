@@ -81,5 +81,16 @@ namespace FizzBuzz.Tests
             result.Should().HaveCount(15);
             result[14].Should().Be("FizzBuzz");
         }
+
+        [Fact]
+        public void GenerateMultipleOf15ReturnsFizzBuzz()
+        {
+            // Arrange & Act
+            var result = FizzBuzzGenerator.Generate(100);
+
+            // Assert
+            result.Should().HaveCount(100);
+            result[14].Should().Be("FizzBuzz");
+        }
     }
 }

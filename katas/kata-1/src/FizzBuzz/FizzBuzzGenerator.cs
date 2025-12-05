@@ -10,7 +10,7 @@ namespace FizzBuzz
                 if (IsMultipleOf(number, 15))
                 {
                     result.Add("FizzBuzz");
-                    break;
+                    continue;
                 }
 
                 if (IsMultipleOf(number, 3))
