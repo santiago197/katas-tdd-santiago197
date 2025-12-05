@@ -7,7 +7,7 @@ namespace FizzBuzz
             var result = new List<string>();
             for (var number = 1; number <= count; number++)
             {
-                if (IsMultipleOf(number, 15))
+                if (EsMultiploDe15(number))
                 {
                     result.Add("FizzBuzz");
                     continue;
@@ -23,6 +23,8 @@ namespace FizzBuzz
 
             return result;
         }
+
+        private static bool EsMultiploDe15(int number) => IsMultipleOf(number, 3) && IsMultipleOf(number, 5);
 
         private static bool IsMultipleOf(int number, int multiple) => number % multiple == 0;
     }
